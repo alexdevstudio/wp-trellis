@@ -35,8 +35,8 @@ EXAMPLES = '''
 # Example from Ansible Playbooks.
 - test_challenges:
     hosts:
-      - example.com
-      - www.example.com
+      - 159.65.225.255
+      - www.159.65.225.255
       - www.mydomain.com
 '''
 

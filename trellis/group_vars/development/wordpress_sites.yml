@@ -3,17 +3,20 @@
 # Define accompanying passwords/secrets in group_vars/development/vault.yml
 
 wordpress_sites:
-  example.com:
+  159.65.225.255:
     site_hosts:
-      - canonical: example.test
+      - canonical: demo.com
         redirects:
-          - www.example.test
+          - www.demo.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@example.test
+    admin_email: info@alexdev.gr
     multisite:
-      enabled: false
+      enabled: true
+      subdomains: false 
     ssl:
       enabled: false
       provider: self-signed
     cache:
       enabled: false
+    env:
+      domain_current_site: demo.com
